@@ -85,7 +85,7 @@ export function Testimonials() {
 
                 <div className="mt-8">
                     <ButtonLink to="/sjednat" className="mt-6">
-                        Sjednat konzultaci
+                        Sjednat zakázku
                     </ButtonLink>
                 </div>
             </div>

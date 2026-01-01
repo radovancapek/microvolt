@@ -94,7 +94,7 @@ export function Offer() {
             </div>
 
             <div className="mt-8">
-              <ButtonLink to="/sjednat">Sjednat konzultaci</ButtonLink>
+              <ButtonLink to="/sjednat">Sjednat zakázku</ButtonLink>
             </div>
           </div>
 

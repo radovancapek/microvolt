@@ -30,7 +30,7 @@ export function Hero() {
                         </p>
 
                         <div className="mt-6">
-                            <ButtonLink to="/sjednat">Sjednat konzultaci</ButtonLink>
+                            <ButtonLink to="/sjednat">Sjednat zakázku</ButtonLink>
                         </div>
                     </div>
                 </div>
