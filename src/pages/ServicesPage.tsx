@@ -1,5 +1,4 @@
 import hero2 from "../assets/PCB-assembly.jpg";
-import boards2Url from "../assets/multiple-boards.jpg";
 import { ServiceRow } from "../components/ServiceRow";
 
 const services = [
