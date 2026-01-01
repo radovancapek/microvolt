@@ -3,7 +3,7 @@ import logo from "../assets/microvolt-1536x462.jpg";
 export function Footer() {
     return (
         <footer className="bg-micro-white">
-            <div className="mx-auto max-w-6xl px-4 py-12">
+            <div className="mx-auto max-w-6xl px-4 pt-12 pb-4">
                 <div className="grid gap-10 sm:grid-cols-4 place-items-center text-xs">
                     <div aria-hidden="true">
                         <img
