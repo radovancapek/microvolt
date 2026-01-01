@@ -55,18 +55,20 @@ const rightItems: Item[] = [
 
 function OfferItem({ item }: { item: Item }) {
   return (
-    <li className="text-xs leading-6 mb-1">
+    <li className="text-xs leading-6">
       <div>
         {item.n}. {item.title}
       </div>
-      <div className="pl-4 text-black -tracking-2 leading-5">{item.body}</div>
+      <div className="pl-4 leading-5 tracking-[-0.02em] text-black/80">
+        {item.body}
+      </div>
     </li>
   );
 }
 
 function OfferColumn({ items }: { items: Item[] }) {
   return (
-    <ol className="space-y-4">
+    <ol className="space-y-3">
       {items.map((item) => (
         <OfferItem key={item.n} item={item} />
       ))}
@@ -81,27 +83,23 @@ export function Offer() {
         <h2 className="text-xl font-semibold text-black/80">
           Co vám můžeme nabídnout
         </h2>
-
-        <div className="mt-10 grid gap-30 md:grid-cols-2">
-          {/* Levý sloupec */}
+        <p className="mt-10 text-xs font-semibold">Kompletní řešení od A do Z</p>
+        {/* Texty (grid) */}
+        <div className="grid gap-3 md:grid-cols-2 md:gap-12">
           <div>
-            <p className="text-xs font-semibold">
-              Kompletní řešení od A do Z
-            </p>
-
             <div className="mt-1">
               <OfferColumn items={leftItems} />
             </div>
-
-            <div className="mt-8">
-              <ButtonLink to="/sjednat">Sjednat zakázku</ButtonLink>
-            </div>
           </div>
 
-          {/* Pravý sloupec */}
-          <div className="pt-1">
+          <div className="md:pt-1">
             <OfferColumn items={rightItems} />
           </div>
+        </div>
+
+        {/* CTA vždy na konci sekce */}
+        <div className="mt-10">
+          <ButtonLink to="/sjednat">Sjednat zakázku</ButtonLink>
         </div>
       </div>
     </section>
