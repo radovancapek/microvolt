@@ -104,46 +104,6 @@ export function ServicesPage() {
                     </div>
                 </div>
             </section>
-
-            {/* Spodní image */}
-            <section className="h-56 sm:h-72">
-                <img src={boards2Url} alt="" className="h-full w-full object-cover" />
-            </section>
-
-            {/* Footer (jednoduchý, můžeš nahradit dle návrhu) */}
-            <footer className="bg-micro-paper">
-                <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-3">
-                    <div>
-                        <div className="h-10 w-40 rounded bg-white" />
-                        <p className="mt-6 text-sm text-black/60">
-                            Precizní zpracování Vaší zakázky
-                        </p>
-                    </div>
-
-                    <div className="text-sm text-black/60">
-                        <div>hello@figma.com</div>
-                        <div>(555) 123-4567</div>
-                        <div className="mt-4">
-                            123 Candyland Lane
-                            <br />
-                            Suite 123
-                            <br />
-                            Los Angeles, CA 94117
-                        </div>
-                    </div>
-
-                    <div className="text-sm text-black/60">
-                        <div>Instagram</div>
-                        <div>Facebook</div>
-                        <div>LinkedIn</div>
-                        <div>Bluesky</div>
-
-                        <div className="mt-8 text-xs text-black/50">
-                            MicroVolt <br />© {new Date().getFullYear()} All Rights Reserved
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </main>
+       </main>
     );
 }
