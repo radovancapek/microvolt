@@ -50,9 +50,7 @@ export function Testimonials() {
                     Reference od zákazníků
                 </h3>
 
-                {/* Fixní výška karty => žádné poskakování layoutu */}
-                <div className="mx-auto mt-8 max-w-xl bg-micro-white px-8 py-10 min-h-[320px] sm:min-h-[300px]">
-                    {/* Text může scrollovat uvnitř */}
+                <div className="flex flex-col justify-between mx-auto mt-8 max-w-xl bg-micro-white px-8 py-10 min-h-[320px] sm:min-h-[300px]">
                     <div className="mx-auto max-w-lg">
                         <p className="text-sm leading-6 text-black/70 max-h-[170px] sm:max-h-[150px] overflow-auto pr-2">
                             “{active.quote}”
