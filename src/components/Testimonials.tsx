@@ -18,13 +18,13 @@ export function Testimonials() {
             },
             {
                 quote:
-                    "Skvělá komunikace, rychlé prototypování a precizní montáž. Doporučuji pro firmy, které potřebují kvalitu a spolehlivost.",
+                    "Skvělá komunikace, rychlé prototypování a precizní montáž. Doporučuji pro firmy, které potřebují kvalitu a spolehlivost. Navíc oceňuji průběžné reporty a rychlé reakce na změny v zadání.",
                 author: "Jan K.",
                 role: "CTO",
             },
             {
                 quote:
-                    "Pomohli nám od návrhu až po sériovou výrobu. AOI kontrola a testování nám výrazně snížily reklamace.",
+                    "Pomohli nám od návrhu až po sériovou výrobu. AOI kontrola a testování nám výrazně snížily reklamace. Spolupráce byla profesionální a dodací termíny byly dodrženy i při iteracích prototypu.",
                 author: "Petra M.",
                 role: "Project Manager",
             },
@@ -50,16 +50,26 @@ export function Testimonials() {
                     Reference od zákazníků
                 </h3>
 
-                <div className="mx-auto mt-8 max-w-xl bg-micro-white px-8 py-10">
-                    <p className="text-sm leading-6 text-black/70">
-                        “{active.quote}”
-                    </p>
-                    <p className="mt-6 text-xs font-semibold text-black/70">
-                        — {active.author}, {active.role}
-                    </p>
+                {/* Fixní výška karty => žádné poskakování layoutu */}
+                <div className="mx-auto mt-8 max-w-xl bg-micro-white px-8 py-10 min-h-[320px] sm:min-h-[300px]">
+                    {/* Text může scrollovat uvnitř */}
+                    <div className="mx-auto max-w-lg">
+                        <p className="text-sm leading-6 text-black/70 max-h-[170px] sm:max-h-[150px] overflow-auto pr-2">
+                            “{active.quote}”
+                        </p>
+
+                        <p className="mt-6 text-xs font-semibold text-black/70">
+                            — {active.author}, {active.role}
+                        </p>
+                    </div>
 
                     <div className="mt-8 flex items-center justify-center gap-3 text-black/50">
-                        <button className="px-2" onClick={prev} aria-label="Previous">
+                        <button
+                            className="px-2"
+                            onClick={prev}
+                            aria-label="Previous"
+                            type="button"
+                        >
                             ←
                         </button>
 
@@ -69,6 +79,7 @@ export function Testimonials() {
                                     key={idx}
                                     onClick={() => setI(idx)}
                                     aria-label={`Go to ${idx + 1}`}
+                                    type="button"
                                     className={[
                                         "h-2 w-2 rounded-full",
                                         idx === i ? "bg-black/60" : "bg-black/25",
@@ -77,16 +88,19 @@ export function Testimonials() {
                             ))}
                         </div>
 
-                        <button className="px-2" onClick={next} aria-label="Next">
+                        <button
+                            className="px-2"
+                            onClick={next}
+                            aria-label="Next"
+                            type="button"
+                        >
                             →
                         </button>
                     </div>
                 </div>
 
                 <div className="mt-8">
-                    <ButtonLink to="/sjednat" className="mt-6">
-                        Sjednat zakázku
-                    </ButtonLink>
+                    <ButtonLink to="/sjednat">Sjednat konzultaci</ButtonLink>
                 </div>
             </div>
         </section>

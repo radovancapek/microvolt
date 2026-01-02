@@ -4,7 +4,7 @@ import { Footer } from "../components/Footer";
 
 export function Layout() {
   return (
-    <div className="min-h-screen bg-white font-sans text-micro-black">
+    <div className="min-h-screen m-auto lg:max-w-7xl bg-white font-sans text-micro-black">
       <Header />
       <Outlet />
       <Footer />
