@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className="bg-micro-white">
             <div className="mx-auto max-w-6xl px-4 pt-12 pb-4">
-                <div className="grid gap-10 sm:grid-cols-4 place-items-center text-xs">
+                <div className="grid sm:grid-cols-4 place-items-center text-xs">
                     <div aria-hidden="true">
                         <img
                             className="h-12"
